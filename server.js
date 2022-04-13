@@ -3,7 +3,6 @@ const fs =require('fs');
 const url=require('url');
 const hostname='127.0.0.1';
 const port=5000;
-//http://localhost:5000/home.html
 http.createServer(function (req, res) {
     //console.log("connection from");
     console.log(req.url);

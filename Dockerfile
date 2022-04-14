@@ -1,13 +1,13 @@
-FROM ubuntu
+FROM node
 
 WORKDIR /usr/src/web
 
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
-
-#RUN npm install
-
-RUN apt-get update && apt-get install nodejs -y
 
 EXPOSE 5000
 
-#CMD ["node","./backend/test.js"]
+CMD ["node","server.js"]
